@@ -14,6 +14,7 @@ st.write(
     """This app analyzes trees in San Fransisco,\
           data kindly provided by SF DPW"""
 )
+@st.cache_data()
 trees_df = pd.read_csv(r"/workspaces/ughhhh/streamlit-app/trees_app/trees.csv")
 
 df_dbh_grouped = pd.DataFrame(
