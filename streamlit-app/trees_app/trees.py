@@ -2,7 +2,7 @@ import datetime as dt
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
+#import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -45,12 +45,12 @@ trees_df_sub = trees_df_sub.sample(n=1000)
 st.map(trees_df_sub)
 st.divider()
 ########################################################################################
-st.subheader("Plotly")
+#st.subheader("Plotly")
 
-fig = px.histogram(trees_df["dbh"])
-st.plotly_chart(fig)
+#fig = px.histogram(trees_df["dbh"])
+#st.plotly_chart(fig)
 
-st.divider()
+##st.divider()
 ################################################################################################
 trees_df["date"] = pd.to_datetime(trees_df["date"])  # convert to datetime object
 trees_df["age"] = (pd.Timestamp.now()) - (trees_df["date"]).dt.days
