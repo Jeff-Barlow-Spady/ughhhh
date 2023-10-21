@@ -1,10 +1,11 @@
+import datetime as dt
 import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
-import datetime as dt
+
 from bokeh.plotting import figure
 import altair as alt
 
@@ -52,12 +53,13 @@ st.plotly_chart(fig)
 st.divider()
 ################################################################################################
 trees_df["date"] = pd.to_datetime(trees_df["date"])  # convert to datetime object
-trees_df["age"] = (pd.to_datetime("today") - pd.to_datetime(trees_df["date"])).dt.days
+trees_df["age"] = (pd.Timestamp.now()) - (trees_df["date"]).dt.days
 st.subheader("Seaborn")
 fig_sb, ax_sb = plt.subplots()
 ax_sb = sns.histplot(trees_df["age"])
 plt.xlabel("Age(Days)")
 st.pyplot(fig_sb)
+
 
 
 
