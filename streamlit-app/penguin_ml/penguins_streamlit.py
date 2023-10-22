@@ -22,8 +22,8 @@ st.write(
 penguin_file = st.file_uploader("Upload your own penguin data")
 
 if penguin_file is None:
-    rf_pickle = open("ughhhh/streamlit-app/penguin_ml/random_forest_penguin.pickle", "rb")
-    map_pickle = open("ughhhh/streamlit-app/penguin_ml/output_penguin.pickle", "rb")
+    rf_pickle = open("https://github.com/Jeff-Barlow-Spady/ughhhh/blob/b5b38303079a4695d05e266343a6be52565f57a3/streamlit-app/penguin_ml/random_forest_penguin.pickle", "rb")
+    map_pickle = open("https://github.com/Jeff-Barlow-Spady/ughhhh/blob/b43bb837dcbf70f43644edf92f0480975f0bb279/streamlit-app/penguin_ml/output_penguin.pickle", "rb")
     rfc = pickle.load(rf_pickle)
     unique_penguin_mapping = pickle.load(map_pickle)
     rf_pickle.close()
