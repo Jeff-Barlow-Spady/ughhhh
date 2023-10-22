@@ -12,14 +12,16 @@ st.write(
 #@st.cache_data(persist=True)
 trees_df = pd.read_csv(
     r"/workspaces/ughhhh/streamlit-app/pretty_trees/Root_for_Trees_Inventory_20231022.csv")
+remap = {'Tree or Shrub' : 'tree_or_shrub', 'Neighbourhood Name' : 'neighbourhood','Longitude' : 'longitude', 'Latitude' : 'latitude'}
+trees_df.rename(mapper=remap, axis=1, inplace=True)
 type = st.sidebar.multiselect(
     "Tree or Shrub",
     trees_df["tree_or_shrub"].unique())
-if owners:
+if type:
     trees_df = trees_df[
 trees_df["tree_or_shrub"].isin(type)]
 DF_GROUPED = pd.DataFrame(
-    trees_df.groupby(["neighbourhood"]).count()["species"])
+    trees_df.groupby(["neighbourhood"]).count()["Species"])
 
 DF_GROUPED.columns = ["tree_count"]
 ##########################################################################
