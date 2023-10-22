@@ -11,7 +11,7 @@ st.write(
 
 #@st.cache_data(persist=True)
 trees_df = pd.read_csv(
-    r"/workspaces/ughhhh/streamlit-app/pretty_trees/Root_for_Trees_Inventory_20231022.csv")
+    r"/workspaces/ughhhh/streamlit-app/pretty_trees/pages/Root_for_Trees_Inventory_20231022.csv")
 remap = {'Tree or Shrub' : 'tree_or_shrub', 'Neighbourhood Name' : 'neighbourhood','Longitude' : 'longitude', 'Latitude' : 'latitude'}
 trees_df.rename(mapper=remap, axis=1, inplace=True)
 type = st.sidebar.multiselect(
