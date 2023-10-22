@@ -28,7 +28,7 @@ if penguin_file is None:
     unique_penguin_mapping = pickle.load(map_pickle)
     rf_pickle.close()
     map_pickle.close()
-    penguin_df = pd.read_csv(r"/workspaces/ughhhh/streamlit-app/penguin_ml/penguins.csv")
+    penguin_df = pd.read_csv(r"streamlit-app/penguin_ml/penguins.csv")
 else:
     penguin_df = pd.read_csv(penguin_file)
     penguin_df = penguin_df.dropna()
