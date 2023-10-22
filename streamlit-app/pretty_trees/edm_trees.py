@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(layout='wide', page_icon=":tree:")
+st.set_page_config(layout='wide', page_icon="🌳")
 st.title("Roots For Trees Inventory")
 st.write(
     """
