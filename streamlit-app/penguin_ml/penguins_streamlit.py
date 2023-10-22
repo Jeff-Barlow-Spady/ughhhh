@@ -103,7 +103,7 @@ st.write(
     prediction are ranked by relative
     importance below."""
 )
-st.image(r"/workspaces/ughhhh/streamlit-app/penguin_ml/feature_importance.png")
+st.image(r"streamlit-app/penguin_ml/feature_importance.png")
 
 st.write(
     """Below are the histograms for each
