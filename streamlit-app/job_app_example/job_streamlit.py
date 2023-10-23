@@ -16,8 +16,10 @@ lottie_airplane = load_lottieurl(
     "https://assets4.lottiefiles.com/packages/lf20_jhu1lqdz.json"
 )
 st_lottie(lottie_airplane, speed=1, height=200, key="initial")
-st.title("Example Job Application Question")
+st.title("Haversine Distance Example")
+st.write("----------------------------------------------------------------------------------")
 st.write("by Jeff Barlow-Spady - inspired by Tyler Richards")
+st.write("----------------------------------------------------------------------------------")
 st.subheader("Question 1: Airport Distance")
 """
 The first exercise asks us 'Given the table of airports and
