@@ -10,7 +10,7 @@ st.write(
           data kindly provided by SF DPW"""
 )
 #@st.cache_data()
-trees_df = pd.read_csv(r"/workspaces/ughhhh/streamlit-app/pretty_trees/pages/trees.csv")
+trees_df = pd.read_csv(r"streamlit-app/pretty_trees/pages/trees.csv")
 trees_df.dropna(how='any', inplace=True)
 
 sf_init_view = pdk.ViewState(
