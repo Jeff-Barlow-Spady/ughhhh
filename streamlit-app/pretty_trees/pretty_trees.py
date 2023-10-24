@@ -11,7 +11,7 @@ st.write(
 
 #@st.cache_data(persist=True)
 trees_df = pd.read_csv(
-    r"/ughhhh/streamlit-app/trees_app/trees.csv")
+    r"streamlit-app/pretty_trees/trees.csv")
 owners = st.sidebar.multiselect(
     "Tree Owner Filter",
     trees_df["caretaker"].unique())
